@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Clock, Phone } from "lucide-react";
 
-// EXPIRY CONFIG — αλλάζεις μόνο αυτή τη γραμμή για άλλα leads/extensions
+// EXPIRY CONFIG
 const EXPIRY_DATE = new Date("2026-05-31T23:59:59");
 const OFFER_PRICE = "€300";
-const WEBMAKER_PHONE = "+357 99 000000"; // ← TODO: βάλε το πραγματικό σου τηλέφωνο
+const WEBMAKER_PHONE_DISPLAY = "+357 99 960 847";
+const WEBMAKER_PHONE_TEL = "+35799960847";
 const WEBMAKER_EMAIL = "info@webmakercy.com";
 
 interface TimeLeft {
@@ -30,9 +31,9 @@ const calcTimeLeft = (): TimeLeft => {
 };
 
 /**
- * ExpiryBanner — Sticky countdown banner στην κορυφή του site.
- * Δείχνει πόσος χρόνος απομένει για να αγοράσει ο πελάτης το €300 site.
- * Μετά τη λήξη, εμφανίζει expired CTA αντί για countdown.
+ * ExpiryBanner — Top-of-page urgency banner with countdown.
+ * NOT sticky — sits at the top of the page and scrolls away naturally,
+ * so the Header remains usable when scrolling.
  */
 export const ExpiryBanner = () => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(calcTimeLeft());
@@ -44,22 +45,22 @@ export const ExpiryBanner = () => {
 
   if (timeLeft.expired) {
     return (
-      <div className="bg-red-700 text-white py-3 px-4 text-center text-sm sm:text-base sticky top-0 z-[60]">
-        <span className="font-medium">⛔ Αυτό το demo έχει λήξει.</span>{" "}
+      <div className="relative z-[60] bg-red-700 text-white py-3 px-4 text-center text-sm sm:text-base">
+        <span className="font-medium">⛔ This demo has expired.</span>{" "}
         <a
           href={`mailto:${WEBMAKER_EMAIL}`}
           className="underline hover:no-underline font-semibold"
         >
-          Επικοινωνήστε με WebMaker
+          Contact WebMaker
         </a>{" "}
-        για το {OFFER_PRICE} site σας.
+        to get your {OFFER_PRICE} website.
       </div>
     );
   }
 
   return (
     <div
-      className="sticky top-0 z-[60] py-2.5 px-3 sm:px-5 text-center text-xs sm:text-sm font-medium"
+      className="relative z-[60] py-2.5 px-3 sm:px-5 text-center text-xs sm:text-sm font-medium"
       style={{
         background: "linear-gradient(90deg, #c47c5a 0%, #d4a574 100%)",
         color: "#fff8ee",
@@ -69,22 +70,22 @@ export const ExpiryBanner = () => {
         <span className="flex items-center gap-2">
           <Clock className="h-4 w-4 inline" />
           <span>
-            <strong>Demo expires σε:</strong>{" "}
+            <strong>Demo expires in:</strong>{" "}
             <span className="font-mono tabular-nums">
-              {timeLeft.days}η {String(timeLeft.hours).padStart(2, "0")}ω{" "}
-              {String(timeLeft.minutes).padStart(2, "0")}λ
+              {timeLeft.days}d {String(timeLeft.hours).padStart(2, "0")}h{" "}
+              {String(timeLeft.minutes).padStart(2, "0")}m
             </span>
           </span>
         </span>
         <span className="hidden sm:inline opacity-60">·</span>
         <span>
-          Παραγγείλετε στα <strong>{OFFER_PRICE}</strong> πριν τις 31 Μαΐου
+          Order yours at <strong>{OFFER_PRICE}</strong> before May 31
         </span>
         <a
-          href={`tel:${WEBMAKER_PHONE.replace(/\s/g, "")}`}
-          className="inline-flex items-center gap-1 bg-white/20 hover:bg-white/30 px-2.5 py-1 rounded-full transition-colors font-semibold"
+          href={`tel:${WEBMAKER_PHONE_TEL}`}
+          className="inline-flex items-center gap-1.5 bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full transition-colors font-semibold"
         >
-          <Phone className="h-3.5 w-3.5" /> WebMaker
+          <Phone className="h-3.5 w-3.5" /> WebMaker {WEBMAKER_PHONE_DISPLAY}
         </a>
       </div>
     </div>
