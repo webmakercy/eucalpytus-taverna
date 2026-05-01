@@ -34,9 +34,15 @@ export const Header = () => {
       }`}
     >
       <div className="container-tight flex items-center justify-between py-4">
-        <a href="#hero" className="flex items-center gap-2">
+        <a href="#hero" className="flex items-center gap-3">
+          <img
+            src="/logo.jpg"
+            alt="5 Ευκάλυπτοι λογότυπο"
+            className="h-12 sm:h-14 w-auto rounded-md shadow-sm"
+            loading="eager"
+          />
           <span
-            className={`font-serif italic text-2xl sm:text-3xl font-medium tracking-tight transition-colors ${
+            className={`font-serif italic text-xl sm:text-2xl font-medium tracking-tight transition-colors hidden sm:inline ${
               scrolled ? "text-eucalyptus-deep" : "text-mint-cream"
             }`}
           >
@@ -95,9 +101,12 @@ export const Header = () => {
           }`}
         >
           <div className="flex items-center justify-between p-5 border-b border-border">
-            <span className="font-serif italic text-2xl font-medium text-eucalyptus-deep">
-              5 Ευκάλυπτοι
-            </span>
+            <div className="flex items-center gap-2">
+              <img src="/logo.jpg" alt="5 Ευκάλυπτοι" className="h-10 w-auto rounded-md" />
+              <span className="font-serif italic text-2xl font-medium text-eucalyptus-deep">
+                5 Ευκάλυπτοι
+              </span>
+            </div>
             <button aria-label="Close" onClick={() => setOpen(false)} className="p-2">
               <X className="h-6 w-6" />
             </button>
