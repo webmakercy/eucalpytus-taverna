@@ -36,11 +36,11 @@ export const Header = () => {
       <div className="container-tight flex items-center justify-between py-4">
         <a href="#hero" className="flex items-center gap-2">
           <span
-            className={`font-serif text-2xl sm:text-3xl font-semibold tracking-tight transition-colors ${
-              scrolled ? "text-foreground" : "text-cream"
+            className={`font-serif italic text-2xl sm:text-3xl font-medium tracking-tight transition-colors ${
+              scrolled ? "text-eucalyptus-deep" : "text-mint-cream"
             }`}
           >
-            5 <span className="text-gold">Ευκάλυπτοι</span>
+            5 Ευκάλυπτοι
           </span>
         </a>
 
@@ -49,8 +49,8 @@ export const Header = () => {
             <a
               key={l.href}
               href={l.href}
-              className={`text-sm font-medium uppercase tracking-wider transition-colors hover:text-gold ${
-                scrolled ? "text-foreground" : "text-cream"
+              className={`label-eyebrow text-xs transition-colors hover:text-eucalyptus ${
+                scrolled ? "text-foreground" : "text-mint-cream"
               }`}
             >
               {l.label}
@@ -59,7 +59,7 @@ export const Header = () => {
         </nav>
 
         <div className="hidden lg:flex">
-          <Button asChild variant="default" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-full px-5">
+          <Button asChild variant="default" className="bg-eucalyptus text-mint-cream hover:bg-eucalyptus-deep rounded-full px-5">
             <a href="tel:+35725336954">
               <Phone className="mr-2 h-4 w-4" /> 25 336954
             </a>
@@ -69,7 +69,7 @@ export const Header = () => {
         <button
           aria-label="Menu"
           className={`lg:hidden p-2 rounded-md transition-colors ${
-            scrolled ? "text-foreground" : "text-cream"
+            scrolled ? "text-foreground" : "text-mint-cream"
           }`}
           onClick={() => setOpen(true)}
         >
@@ -95,8 +95,8 @@ export const Header = () => {
           }`}
         >
           <div className="flex items-center justify-between p-5 border-b border-border">
-            <span className="font-serif text-2xl font-semibold">
-              5 <span className="text-gold">Ευκάλυπτοι</span>
+            <span className="font-serif italic text-2xl font-medium text-eucalyptus-deep">
+              5 Ευκάλυπτοι
             </span>
             <button aria-label="Close" onClick={() => setOpen(false)} className="p-2">
               <X className="h-6 w-6" />
@@ -108,14 +108,14 @@ export const Header = () => {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="font-serif text-2xl py-3 border-b border-border/60 hover:text-gold transition-colors"
+                className="font-serif italic text-2xl py-3 border-b border-border/60 hover:text-eucalyptus transition-colors"
               >
                 {l.label}
               </a>
             ))}
           </nav>
           <div className="mt-auto p-5">
-            <Button asChild className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-full h-12">
+            <Button asChild className="w-full bg-eucalyptus text-mint-cream hover:bg-eucalyptus-deep rounded-full h-12">
               <a href="tel:+35725336954">
                 <Phone className="mr-2 h-5 w-5" /> Καλέστε μας
               </a>
