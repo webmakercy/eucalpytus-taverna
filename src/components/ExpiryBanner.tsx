@@ -73,7 +73,8 @@ export const ExpiryBanner = () => {
             <strong>Demo expires in:</strong>{" "}
             <span className="font-mono tabular-nums">
               {timeLeft.days}d {String(timeLeft.hours).padStart(2, "0")}h{" "}
-              {String(timeLeft.minutes).padStart(2, "0")}m
+              {String(timeLeft.minutes).padStart(2, "0")}m{" "}
+              {String(timeLeft.seconds).padStart(2, "0")}s
             </span>
           </span>
         </span>
