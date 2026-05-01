@@ -62,6 +62,14 @@ export default {
           foreground: "hsl(var(--gold-foreground))",
         },
         terracotta: "hsl(var(--terracotta))",
+        eucalyptus: {
+          DEFAULT: "hsl(var(--eucalyptus))",
+          deep: "hsl(var(--eucalyptus-deep))",
+        },
+        mint: {
+          cream: "hsl(var(--mint-cream))",
+        },
+        sage: "hsl(var(--sage))",
         olive: {
           DEFAULT: "hsl(var(--olive))",
           deep: "hsl(var(--olive-deep))",
@@ -72,8 +80,10 @@ export default {
         },
       },
       fontFamily: {
-        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['"Playfair Display"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+        sans: ['Lato', 'Inter', 'system-ui', 'sans-serif'],
+        display: ['"Playfair Display"', 'Georgia', 'serif'],
+        label: ['Montserrat', 'Lato', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

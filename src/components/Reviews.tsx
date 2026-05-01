@@ -24,16 +24,16 @@ export const Reviews = () => {
   }, []);
 
   return (
-    <section id="reviews" className="py-20 sm:py-28 bg-cream-deep/60">
+    <section id="reviews" className="py-20 sm:py-28 bg-muted/40">
       <div className="container-tight max-w-3xl text-center">
-        <p className="text-secondary uppercase tracking-[0.25em] text-xs sm:text-sm mb-4 font-medium">
+        <p className="label-eyebrow text-eucalyptus text-xs sm:text-sm mb-4">
           — Τι λένε οι πελάτες μας —
         </p>
         <h2
-          className="font-serif font-semibold mb-12 text-balance"
+          className="font-serif font-medium mb-12 text-balance text-eucalyptus-deep"
           style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
         >
-          ⭐ 4.6 από <span className="italic text-olive">220 reviews</span>
+          ⭐ 4.6 από <span className="italic">220 reviews</span>
         </h2>
 
         <div className="relative min-h-[260px] sm:min-h-[220px]">
@@ -44,7 +44,7 @@ export const Reviews = () => {
                 i === idx ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
               }`}
             >
-              <div className="text-gold text-2xl mb-4 tracking-widest">★★★★★</div>
+              <div className="text-eucalyptus text-2xl mb-4 tracking-widest">★★★★★</div>
               <blockquote
                 className="font-serif italic text-foreground/90 text-balance leading-snug"
                 style={{ fontSize: "clamp(1.15rem, 2vw, 1.65rem)" }}
@@ -65,7 +65,7 @@ export const Reviews = () => {
               aria-label={`Review ${idx + 1}`}
               onClick={() => setI(idx)}
               className={`h-2 rounded-full transition-all ${
-                i === idx ? "w-8 bg-secondary" : "w-2 bg-foreground/20"
+                i === idx ? "w-8 bg-eucalyptus" : "w-2 bg-foreground/20"
               }`}
             />
           ))}

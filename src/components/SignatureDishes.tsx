@@ -48,14 +48,14 @@ export const SignatureDishes = () => (
   <section id="menu" className="py-20 sm:py-28">
     <div className="container-tight">
       <div className="text-center mb-14 sm:mb-20 max-w-2xl mx-auto">
-        <p className="text-secondary uppercase tracking-[0.25em] text-xs sm:text-sm mb-4 font-medium">
+        <p className="label-eyebrow text-eucalyptus text-xs sm:text-sm mb-4">
           — Το μενού μας —
         </p>
         <h2
-          className="font-serif font-semibold text-balance"
+          className="font-serif font-medium text-balance text-eucalyptus-deep"
           style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)" }}
         >
-          Πιάτα <span className="italic text-olive">υπογραφής</span>
+          Πιάτα <span className="italic">υπογραφής</span>
         </h2>
         <p className="mt-5 text-muted-foreground text-balance">
           Φρέσκα υλικά κάθε μέρα. Καθόλου κατεψυγμένα. Συνταγές που περνάνε από γενιά σε γενιά.
@@ -78,8 +78,8 @@ export const SignatureDishes = () => (
             </div>
             <div className="p-6">
               <div className="flex items-baseline justify-between gap-3 mb-2">
-                <h3 className="font-serif text-2xl font-semibold">{d.name}</h3>
-                <span className="text-gold font-serif text-xl font-semibold">{d.price}</span>
+                <h3 className="font-serif text-2xl font-medium text-eucalyptus-deep">{d.name}</h3>
+                <span className="text-eucalyptus font-serif italic text-xl font-semibold">{d.price}</span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">{d.desc}</p>
             </div>

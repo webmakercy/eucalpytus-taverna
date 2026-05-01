@@ -1,71 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@400;500;600;700&family=Lato:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 5 Eucalyptus design system — warm Cypriot taverna earth tones.
+/* 5 Ευκάλυπτοι — boutique mezedopoleio design system.
+   Eucalyptus-green brand palette extracted from the official logo.
    All colors HSL. */
 
 @layer base {
   :root {
-    /* Brand palette */
-    --background: 38 47% 92%;          /* cream #f5ede0 */
-    --foreground: 24 47% 16%;          /* dark coffee #3d2817 */
+    /* Brand palette — from logo */
+    --background: 44 50% 95%;            /* warm cream #faf6ee */
+    --foreground: 138 12% 14%;           /* charcoal #1f2a23 */
 
-    --card: 38 50% 96%;
-    --card-foreground: 24 47% 16%;
+    --card: 44 55% 97%;
+    --card-foreground: 138 12% 14%;
 
-    --popover: 38 50% 96%;
-    --popover-foreground: 24 47% 16%;
+    --popover: 44 55% 97%;
+    --popover-foreground: 138 12% 14%;
 
-    --primary: 92 23% 30%;             /* olive green #4a5d3a */
-    --primary-foreground: 38 47% 95%;
+    --primary: 140 24% 37%;              /* eucalyptus green #487358 */
+    --primary-foreground: 138 60% 94%;   /* mint cream #e5f8ea */
 
-    --secondary: 19 47% 56%;           /* terracotta #c47c5a */
-    --secondary-foreground: 38 47% 96%;
+    --secondary: 140 25% 28%;            /* deep eucalyptus #365a44 */
+    --secondary-foreground: 138 60% 94%;
 
-    --muted: 38 30% 86%;
-    --muted-foreground: 24 25% 32%;
+    --muted: 140 18% 90%;
+    --muted-foreground: 138 10% 32%;
 
-    --accent: 41 51% 55%;              /* warm gold #c9a352 */
-    --accent-foreground: 24 47% 16%;
+    --accent: 140 21% 70%;               /* muted sage #a5c2ae */
+    --accent-foreground: 138 12% 14%;
 
     --destructive: 0 65% 45%;
-    --destructive-foreground: 38 47% 96%;
+    --destructive-foreground: 44 50% 96%;
 
-    --border: 30 25% 78%;
-    --input: 30 25% 80%;
-    --ring: 92 23% 30%;
+    --border: 140 15% 78%;
+    --input: 140 15% 80%;
+    --ring: 140 24% 37%;
 
-    --radius: 0.625rem;
+    --radius: 0.5rem;
 
     /* Custom semantic tokens */
-    --gold: 41 51% 55%;
-    --gold-foreground: 24 47% 16%;
-    --terracotta: 19 47% 56%;
-    --olive: 92 23% 30%;
-    --olive-deep: 92 25% 22%;
-    --cream-deep: 38 38% 84%;
+    --eucalyptus: 140 24% 37%;           /* #487358 */
+    --eucalyptus-deep: 140 25% 28%;      /* #365a44 */
+    --mint-cream: 138 60% 94%;           /* #e5f8ea */
+    --sage: 140 21% 70%;                 /* #a5c2ae */
+    --terracotta: 19 47% 56%;            /* #c47c5a — sparingly */
+    --gold: 41 51% 55%;                  /* legacy alias kept */
+    --gold-foreground: 138 12% 14%;
 
-    --gradient-hero: linear-gradient(180deg, hsl(24 47% 8% / 0.15) 0%, hsl(24 47% 8% / 0.55) 60%, hsl(24 47% 8% / 0.85) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(19 47% 56%) 0%, hsl(15 55% 48%) 100%);
-    --gradient-olive: linear-gradient(135deg, hsl(92 25% 28%) 0%, hsl(92 23% 22%) 100%);
+    /* Legacy aliases so older components keep working */
+    --olive: 140 24% 37%;
+    --olive-deep: 140 25% 28%;
+    --cream-deep: 44 35% 88%;
 
-    --shadow-warm: 0 20px 50px -20px hsl(24 47% 16% / 0.35);
-    --shadow-soft: 0 8px 24px -8px hsl(24 47% 16% / 0.18);
-    --shadow-card: 0 4px 16px -4px hsl(24 47% 16% / 0.12);
+    --gradient-hero: linear-gradient(180deg, hsl(140 25% 8% / 0.10) 0%, hsl(140 25% 12% / 0.55) 60%, hsl(140 25% 14% / 0.92) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(140 24% 37%) 0%, hsl(140 25% 28%) 100%);
+    --gradient-olive: linear-gradient(135deg, hsl(140 24% 37%) 0%, hsl(140 25% 22%) 100%);
+
+    --shadow-warm: 0 24px 60px -28px hsl(140 25% 14% / 0.35);
+    --shadow-soft: 0 8px 24px -8px hsl(140 25% 14% / 0.18);
+    --shadow-card: 0 4px 18px -6px hsl(140 25% 14% / 0.12);
 
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-background: 38 47% 92%;
-    --sidebar-foreground: 24 47% 16%;
-    --sidebar-primary: 92 23% 30%;
-    --sidebar-primary-foreground: 38 47% 95%;
-    --sidebar-accent: 38 30% 86%;
-    --sidebar-accent-foreground: 24 47% 16%;
-    --sidebar-border: 30 25% 78%;
-    --sidebar-ring: 92 23% 30%;
+    --sidebar-background: 44 50% 95%;
+    --sidebar-foreground: 138 12% 14%;
+    --sidebar-primary: 140 24% 37%;
+    --sidebar-primary-foreground: 138 60% 94%;
+    --sidebar-accent: 140 18% 90%;
+    --sidebar-accent-foreground: 138 12% 14%;
+    --sidebar-border: 140 15% 78%;
+    --sidebar-ring: 140 24% 37%;
   }
 }
 
@@ -85,7 +92,14 @@
 
   h1, h2, h3, h4 {
     @apply font-serif;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
+  }
+
+  .label-eyebrow {
+    font-family: 'Montserrat', 'Lato', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 500;
   }
 }
 
