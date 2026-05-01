@@ -3,7 +3,7 @@ import { Clock, Phone } from "lucide-react";
 
 // EXPIRY CONFIG
 const EXPIRY_DATE = new Date("2026-05-31T23:59:59");
-const OFFER_PRICE = "€300";
+const OFFER_PRICE = "€299";
 const WEBMAKER_PHONE_DISPLAY = "+357 99 960 847";
 const WEBMAKER_PHONE_TEL = "+35799960847";
 const WEBMAKER_EMAIL = "info@webmakercy.com";
