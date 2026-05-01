@@ -4,14 +4,14 @@ export const Contact = () => (
   <section id="contact" className="py-20 sm:py-28">
     <div className="container-tight">
       <div className="text-center mb-14 max-w-2xl mx-auto">
-        <p className="text-secondary uppercase tracking-[0.25em] text-xs sm:text-sm mb-4 font-medium">
+        <p className="label-eyebrow text-eucalyptus text-xs sm:text-sm mb-4">
           — Ελάτε να μας γνωρίσετε —
         </p>
         <h2
-          className="font-serif font-semibold text-balance"
+          className="font-serif font-medium text-balance text-eucalyptus-deep"
           style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
         >
-          Επικοινωνία &amp; <span className="italic text-olive">τοποθεσία</span>
+          Επικοινωνία &amp; <span className="italic">τοποθεσία</span>
         </h2>
       </div>
 
@@ -21,14 +21,14 @@ export const Contact = () => (
             Νίκου &amp; Δέσποινας Παττίχη 5Λ, Λεμεσός, Κύπρος
           </InfoRow>
           <InfoRow icon={<Phone className="h-5 w-5" />} label="Τηλέφωνο">
-            <a href="tel:+35725336954" className="hover:text-secondary transition-colors">
+            <a href="tel:+35725336954" className="hover:text-eucalyptus transition-colors">
               +357 25 336954
             </a>
           </InfoRow>
           <InfoRow icon={<Mail className="h-5 w-5" />} label="Email">
             <a
               href="mailto:taverna5efkaliptoi@gmail.com"
-              className="hover:text-secondary transition-colors break-all"
+              className="hover:text-eucalyptus transition-colors break-all"
             >
               taverna5efkaliptoi@gmail.com
             </a>
@@ -73,11 +73,11 @@ const InfoRow = ({
   children: React.ReactNode;
 }) => (
   <div className="flex gap-4">
-    <div className="flex-shrink-0 h-11 w-11 rounded-full bg-olive text-primary-foreground flex items-center justify-center">
+    <div className="flex-shrink-0 h-11 w-11 rounded-full bg-eucalyptus text-mint-cream flex items-center justify-center">
       {icon}
     </div>
     <div>
-      <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground font-medium mb-1">
+      <div className="label-eyebrow text-[0.7rem] text-muted-foreground mb-1">
         {label}
       </div>
       <div className="text-foreground leading-relaxed">{children}</div>
@@ -99,7 +99,7 @@ const SocialIcon = ({
     target="_blank"
     rel="noopener noreferrer"
     aria-label={label}
-    className="h-11 w-11 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center hover:bg-secondary/85 transition-colors"
+    className="h-11 w-11 rounded-full bg-eucalyptus text-mint-cream flex items-center justify-center hover:bg-eucalyptus-deep transition-colors"
   >
     {children}
   </a>
