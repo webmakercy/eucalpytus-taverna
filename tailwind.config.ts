@@ -62,21 +62,6 @@ export default {
         serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
-      colors: {
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          foreground: "hsl(var(--gold-foreground))",
-        },
-        terracotta: "hsl(var(--terracotta))",
-        olive: {
-          DEFAULT: "hsl(var(--olive))",
-          deep: "hsl(var(--olive-deep))",
-        },
-        cream: {
-          DEFAULT: "hsl(var(--background))",
-          deep: "hsl(var(--cream-deep))",
-        },
-      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
