@@ -1,3 +1,4 @@
+import { ExpiryBanner } from "@/components/ExpiryBanner";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { StatsBar } from "@/components/StatsBar";
@@ -13,6 +14,7 @@ import { Footer } from "@/components/Footer";
 const Index = () => {
   return (
     <main className="min-h-screen bg-background text-foreground">
+      <ExpiryBanner />
       <Header />
       <Hero />
       <StatsBar />
