@@ -57,6 +57,19 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          foreground: "hsl(var(--gold-foreground))",
+        },
+        terracotta: "hsl(var(--terracotta))",
+        olive: {
+          DEFAULT: "hsl(var(--olive))",
+          deep: "hsl(var(--olive-deep))",
+        },
+        cream: {
+          DEFAULT: "hsl(var(--background))",
+          deep: "hsl(var(--cream-deep))",
+        },
       },
       fontFamily: {
         serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
